@@ -34,7 +34,7 @@
           container.appendChild(article);
         });
       } catch (err) {
-        container.innerHTML = "<p>⚠️ Failed to load blog posts.</p>";
+        container.innerHTML = "<p class='error-message'>⚠️ Failed to load blog posts. Try refreshing.</p>";
         console.error("Blog post loading error:", err);
       }
     });
@@ -50,7 +50,7 @@
   </section>
 
   <main class="blog-index">
-    <p id="loading">⏳ Loading posts...</p>
+    <p id="loading" class="loading-msg">⏳ Loading posts...</p>
     <!-- Posts will be injected here dynamically -->
   </main>
 
