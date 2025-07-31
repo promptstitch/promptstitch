@@ -5,119 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PromptStitch</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #f9fafb, #f1f5f9);
-      color: #111;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #3b82f6, #6366f1);
-      padding: 3rem 2rem;
-      text-align: center;
-      color: white;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.25rem;
-      opacity: 0.9;
-    }
-    nav {
-      background-color: #fff;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    }
-    nav a {
-      margin: 0 1.5rem;
-      color: #333;
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-    nav a:hover {
-      color: #3b82f6;
-    }
-    .featured-tools {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .featured-tools h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-    .tools {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .tool-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      padding: 2rem;
-      width: 280px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .tool-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .tool-card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-    }
-    .tool-card p {
-      color: #555;
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
-    .tool-card a {
-      background-color: #3b82f6;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.2s ease;
-    }
-    .tool-card a:hover {
-      background-color: #2563eb;
-    }
-    .why {
-      background: #fff;
-      padding: 4rem 2rem;
-      text-align: center;
-      border-top: 1px solid #eee;
-    }
-    .why h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .why p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1rem;
-      color: #444;
-    }
-    footer {
-      background: #f1f5f9;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.875rem;
-      color: #666;
-    }
-  </style>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <header>
@@ -126,29 +14,29 @@
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Tools</a>
-    <a href="blog/index.html">Blog</a>
-    <a href="#">Contact</a>
+    <a href="/index.html">Home</a>
+    <a href="#tools">Tools</a>
+    <a href="/blog/">Blog</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <section class="featured-tools">
+  <section class="featured-tools" id="tools">
     <h2>Featured Tools</h2>
     <div class="tools">
       <div class="tool-card">
         <h3>Rytr</h3>
         <p>Generate high-quality content in seconds. Perfect for blogs, social media, and email marketing.</p>
-        <a href="#">Try Rytr</a>
+        <a href="https://rytr.me/?via=d14218">Try Rytr</a>
       </div>
       <div class="tool-card">
         <h3>Writesonic</h3>
         <p>AI writing and image generation in one platform. Boost conversions with smart copy.</p>
-        <a href="#">Explore Writesonic</a>
+        <a href="https://writesonic.com" target="_blank">Explore Writesonic</a>
       </div>
       <div class="tool-card">
         <h3>Notion AI</h3>
         <p>Streamline notes, projects, and documentation. Collaborate faster with AI productivity tools.</p>
-        <a href="#">See Notion AI</a>
+        <a href="https://www.notion.so/product/ai" target="_blank">See Notion AI</a>
       </div>
     </div>
   </section>
@@ -159,7 +47,7 @@
   </section>
 
   <footer>
-    © 2025 PromptStitch · contact@promptstitch.com
+    <p id="contact">© 2025 PromptStitch · contact@promptstitch.com</p>
   </footer>
 </body>
 </html>
