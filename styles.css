@@ -1,9 +1,18 @@
 
+/* =========================
+   PromptStitch Blog Styles
+   ========================= */
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom right, #f9fafb, #f1f5f9);
+  background-color: #f8f9fa;
   color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .hero {
@@ -11,90 +20,99 @@ body {
   padding: 3rem 1rem;
   background: linear-gradient(to right, #6366f1, #3b82f6);
   color: white;
-  position: relative;
-}
-
-.hero-container {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-divider {
-  height: 20px;
-  background: url('/blog/images/divider-wave.svg') repeat-x;
-  background-size: cover;
-  margin-top: -10px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   margin-bottom: 0.5rem;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  opacity: 0.95;
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+
+.hero-divider {
+  height: 6px;
+  width: 120px;
+  background: white;
+  opacity: 0.3;
+  border-radius: 3px;
+  margin: 2rem auto 0;
 }
 
 .blog-index {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
+  padding: 3rem 2rem;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .post-card {
   background: white;
-  padding: 1.5rem;
   border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .post-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .post-card img {
   width: 100%;
-  max-height: 160px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 12px;
+  border-bottom: 1px solid #eee;
 }
 
 .post-content {
-  padding-top: 1rem;
+  padding: 1.5rem;
 }
 
-.post-card h2 {
-  margin-top: 0.5rem;
-  font-size: 1.15rem;
-  color: #111;
+.post-content h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  color: #111827;
 }
 
-.post-card p {
+.post-content p {
   font-size: 0.95rem;
-  color: #444;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
-.post-card .tag {
+.tag {
   display: inline-block;
-  margin-top: 0.75rem;
-  padding: 0.35rem 0.6rem;
-  background-color: #e5ecff;
-  color: #3654ff;
+  background-color: #e0e7ff;
+  color: #3730a3;
   font-size: 0.75rem;
-  font-weight: 600;
+  padding: 0.25rem 0.5rem;
   border-radius: 4px;
 }
 
-footer {
-  background: #f1f5f9;
+.loading-msg {
+  font-size: 1rem;
   text-align: center;
+  color: #666;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  background: #f0f0f0;
   padding: 2rem;
-  font-size: 0.875rem;
+  text-align: center;
+  font-size: 0.9rem;
   color: #777;
+  margin-top: 4rem;
 }
