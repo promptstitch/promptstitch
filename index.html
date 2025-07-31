@@ -8,114 +8,139 @@
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #f9fafb, #f1f5f9);
-      color: #111;
-      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      animation: fadeIn 1s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     header {
-      background: linear-gradient(to right, #3b82f6, #6366f1);
-      padding: 3rem 2rem;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       text-align: center;
-      color: white;
     }
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      margin: 0;
+      font-size: 2rem;
     }
     header p {
-      font-size: 1.25rem;
-      opacity: 0.9;
+      margin: 0.5rem 0 0;
+      color: #666;
+      font-size: 1rem;
     }
+
     nav {
-      background-color: #fff;
-      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: #f0f0f0;
       text-align: center;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
     }
+
     nav a {
-      margin: 0 1.5rem;
+      margin: 0 1rem;
       color: #333;
-      font-weight: 600;
       text-decoration: none;
-      transition: color 0.2s ease;
+      font-weight: 600;
     }
-    nav a:hover {
-      color: #3b82f6;
-    }
+
     .featured-tools {
-      padding: 4rem 2rem;
+      padding: 2rem;
       text-align: center;
     }
-    .featured-tools h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
+
     .tools {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
+      margin-top: 2rem;
     }
+
     .tool-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      padding: 2rem;
-      width: 280px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      max-width: 300px;
+      text-align: left;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
     .tool-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transform: scale(1.025);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
+
     .tool-card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
+      margin-top: 0;
     }
+
     .tool-card p {
-      color: #555;
       font-size: 0.95rem;
-      margin-bottom: 1rem;
+      color: #555;
     }
+
     .tool-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
       background-color: #3b82f6;
       color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
+      border-radius: 5px;
       text-decoration: none;
       font-weight: 600;
-      transition: background-color 0.2s ease;
     }
-    .tool-card a:hover {
-      background-color: #2563eb;
-    }
-    .why {
-      background: #fff;
-      padding: 4rem 2rem;
+
+    .why, .testimonials {
+      padding: 3rem 2rem;
       text-align: center;
-      border-top: 1px solid #eee;
+      background-color: #fff;
     }
-    .why h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      opacity: 0.6;
     }
-    .why p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1rem;
+
+    .trust-badges img {
+      max-height: 40px;
+    }
+
+    .testimonials blockquote {
+      max-width: 600px;
+      margin: 1rem auto;
+      font-style: italic;
       color: #444;
     }
+
     footer {
-      background: #f1f5f9;
       text-align: center;
       padding: 2rem;
       font-size: 0.875rem;
-      color: #666;
+      color: #999;
+    }
+
+    @media (max-width: 768px) {
+      .tools {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -156,6 +181,18 @@
   <section class="why">
     <h2>Why PromptStitch?</h2>
     <p>We test dozens of AI platforms and only promote the ones that are efficient, user-friendly, and monetization-ready. No fluff. No spam. Just value-focused tools that help creators, freelancers, and entrepreneurs scale smarter.</p>
+
+    <div class="trust-badges">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Trustpilot_logo.png" alt="Trustpilot">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/G2_Crowd_logo.svg" alt="G2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Google_Review_Logo.png" alt="Google Reviews">
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Visitors Say</h2>
+    <blockquote>"PromptStitch helped me find the right tool to launch my niche site — I made my first $100 in a week!"</blockquote>
+    <blockquote>"Super clean site. Real recommendations. Love it."</blockquote>
   </section>
 
   <footer>
