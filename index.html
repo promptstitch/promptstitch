@@ -6,84 +6,116 @@
   <title>PromptStitch</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+    body {
       font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background: linear-gradient(to bottom right, #f9fafb, #f1f5f9);
+      color: #111;
+      line-height: 1.6;
     }
     header {
-      background-color: #fff;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      background: linear-gradient(to right, #3b82f6, #6366f1);
+      padding: 3rem 2rem;
       text-align: center;
+      color: white;
     }
     header h1 {
-      margin: 0;
-      font-size: 2rem;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
     header p {
-      margin: 0.5rem 0 0;
-      color: #666;
-      font-size: 1rem;
+      font-size: 1.25rem;
+      opacity: 0.9;
     }
     nav {
+      background-color: #fff;
+      padding: 1rem;
       text-align: center;
-      padding: 1rem 0;
-      background-color: #f0f0f0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
     nav a {
-      margin: 0 1rem;
+      margin: 0 1.5rem;
       color: #333;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    nav a:hover {
+      color: #3b82f6;
     }
     .featured-tools {
-      padding: 2rem;
+      padding: 4rem 2rem;
       text-align: center;
+    }
+    .featured-tools h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
     .tools {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 2rem;
       flex-wrap: wrap;
-      margin-top: 2rem;
     }
     .tool-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      padding: 1.5rem;
-      max-width: 300px;
-      text-align: left;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 2rem;
+      width: 280px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
     .tool-card h3 {
-      margin-top: 0;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
     }
     .tool-card p {
-      font-size: 0.95rem;
       color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
     }
     .tool-card a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
       background-color: #3b82f6;
       color: white;
-      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+    .tool-card a:hover {
+      background-color: #2563eb;
     }
     .why {
-      padding: 3rem 2rem;
+      background: #fff;
+      padding: 4rem 2rem;
       text-align: center;
-      background-color: #fff;
+      border-top: 1px solid #eee;
+    }
+    .why h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .why p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: #444;
     }
     footer {
+      background: #f1f5f9;
       text-align: center;
       padding: 2rem;
       font-size: 0.875rem;
-      color: #999;
+      color: #666;
     }
   </style>
 </head>
