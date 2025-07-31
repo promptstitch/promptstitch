@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -75,4 +76,81 @@ footer {
   font-size: 0.85rem;
   color: #999;
   margin-top: 4rem;
+}
+
+/* Homepage-specific styling */
+.featured-tools {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.featured-tools h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tools {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tool-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 2rem;
+  width: 280px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.tool-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.tool-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.tool-card a {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.tool-card a:hover {
+  background-color: #2563eb;
+}
+
+.why {
+  background: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.why h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.why p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #444;
 }
